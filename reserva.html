@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Haga su reserva</h1>
+    <form action="procesareserva.php" method="get">
+    <fieldset>
+        <Legend>Datos personales</Legend>
+            <p> 
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre"
+                maxlength="100" autofocus required>
+            </p>
+            <p> 
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos"
+                maxlength="100" required>
+            </p>
+            <p> <label for="dni">DNI</label>
+                <input type="text" id="dni" name="dni"
+                 maxlength="10" required placeholder="DNI con letra">
+            </p>    
+    </fieldset>
+    <br>
+    <fieldset>
+        <Legend>Datos de su estancia</Legend>
+            <p> <!-- He cacharreado un poco y he visto que alterando el orden del label
+                y del input podría poner los "radio" a la izquierda de las palabras,
+                lo cual es más intuitivo, pero lo dejo así ya en los viduotutoriales
+                lo hizo usted así"-->
+                Habitación:                
+                <label for="individual">Individual</label>
+                    <input type="radio" id="individual" name="habitación" 
+                    value="individual" required> 
+                <label for="doble">Doble</label>
+                    <input type="radio" id="doble" name="habitación" 
+                     value="doble" required>
+                
+                <label for="triple">Triple</label>
+                    <input type="radio" id="triple" name="habitación" 
+                    value="triple" required>                
+            </p>
+            <p>
+                <!--No entiendo aquí una etiqueta label, ya que
+                no abre la selección deplegable, solo la marca
+                al pulsar sobre las letras-->
+                <label for="Numpers">Número de personas:</label>
+                    <select name="Numpers" id="Numpers">
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                    </select>
+            </p>
+            <p><label for="pet">Llevo mascotas</label>
+                <input type="checkbox" id="pet" name="pet">
+            </p>            
+            <p>
+                <label for="Fecha">Fecha de llegada:</label>
+                <input type="date" id="Fecha" name="Fecha">
+            </p>
+            <p>
+                <label for="hora">Hora de llegada:</label>
+                <input type="time" id="hora" name="hora">
+            </p>
+    </fieldset>
+    <br>
+    <p> 
+       <input type="submit" value="Enviar">
+       <input type="reset" value="Reiniciar">
+    </p>
+    </form>
+    <p>
+        <a href="Index.html">Volver</a>
+    </p>      
+</body>
+</html>
